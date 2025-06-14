@@ -1,0 +1,182 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #2c2c2c, #4d0000);
+    padding: 20px;
+}
+
+header .stamp {
+    position: absolute;
+    left: 30px;
+    height: 70px;
+    opacity: 0.8;
+}
+
+header .stamp:hover {
+    opacity: 1;
+}
+
+header p {
+    text-align: center;
+    color: #ff2400;
+    font-size: 45px;
+}
+
+/*Тело сайта */
+
+.info {
+    padding: 30px 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: #2a2a2a;
+    color: #dcdcdc;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Контейнер с фреймами */
+
+.container {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+}
+
+/* Фреймы */
+.menu-frame {
+    width: 220px;
+    background: linear-gradient(180deg, #4d0000, #2c0000);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 10px;
+}
+
+.content-frame {
+    flex: 1;
+    background-color: #1a1a1a;
+}
+
+/* Меню */
+
+.menu-list > li {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.menu-list > li > a {
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-list > li:hover > a::before {
+    height: 80%;
+}
+
+.menu-list > li:hover > a {
+    background-color: rgba(255, 36, 0, 0.2);
+    transform: translateX(5px);
+}
+
+/* Выпадающее меню */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    background: linear-gradient(180deg, #4d0000, #2c0000);
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-left: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.dropdown-content a {
+    padding: 8px 25px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 36, 0, 0.3);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Подвал */
+footer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #2c2c2c, #4d0000);
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+footer a,
+footer p {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff2400;
+}
+
+/* Декоративные элементы */
+
+header::after {
+    content: '⚔️';
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
+    color: #ff2400;
+    text-shadow: 0 0 10px #ff2400;
+}
+
+audio{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(180deg, #4d0000, #2c0000);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(255, 36, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+audio:hover {
+    background: linear-gradient(180deg, #ff2400, #800000);
+    transform: scale(1.05);
+}
